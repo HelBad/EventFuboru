@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".view.ActivityBeranda">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBeranda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Daftar Hadir" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBeranda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layBeranda"
+        android:layout_below="@+id/toolbarBeranda"
+        tools:listitem="@layout/list_register"/>
+
+    <TextView
+        android:id="@+id/kosongBeranda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layBeranda"
+        android:layout_below="@+id/toolbarBeranda"
+        android:gravity="center"
+        android:text="Daftar Kosong"
+        android:textSize="15dp"
+        android:textColor="@color/colorGrey"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/layBeranda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorYellow1"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/totalBeranda"
+                android:layout_centerVertical="true"
+                android:text="Total yang Ter-Register  :  "
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/totalBeranda"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:hint="0"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:editable="false"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="15dp">
+            <RelativeLayout
+                android:id="@+id/btnInput"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:background="@drawable/dec_button"
+                android:backgroundTint="@color/colorAccent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_edit"
+                    android:backgroundTint="@android:color/white"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btnScan"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@+id/btnInput"
+                android:gravity="center"
+                android:background="@drawable/dec_button"
+                android:backgroundTint="@color/colorAccent"
+                android:text="SCAN QR CODE"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

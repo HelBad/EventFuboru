@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/register"
+        android:title="Cust. Register"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/service"
+        android:title="Cust. Service"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/cari"
+        android:title="Cari"
+        android:icon="@drawable/ic_cari"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".view.ActivityService">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Daftar Service" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerService"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layService"
+        android:layout_below="@+id/toolbarService"
+        tools:listitem="@layout/list_beranda"/>
+
+    <TextView
+        android:id="@+id/kosongService"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layService"
+        android:layout_below="@+id/toolbarService"
+        android:gravity="center"
+        android:text="Daftar Kosong"
+        android:textSize="15dp"
+        android:textColor="@color/colorGrey"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/layService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorYellow1"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/totalService"
+                android:layout_centerVertical="true"
+                android:text="Total yang Sudah Service  :  "
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/totalService"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:hint="0"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:editable="false"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

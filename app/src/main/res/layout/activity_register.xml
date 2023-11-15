@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".view.ActivityRegister">
+    <RelativeLayout
+        android:id="@+id/toolbar2Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="5dp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone">
+        <LinearLayout
+            android:id="@+id/laybtnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/batalRegister"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="5dp"
+                android:src="@drawable/ic_batal"/>
+
+            <ImageView
+                android:id="@+id/lanjutRegister"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_lanjut"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/laybtnRegister"
+            android:layout_marginBottom="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dec_border">
+            <EditText
+                android:id="@+id/namaRegister"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/colorYellow"
+                android:hint="Nama Register"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Belum Register" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRegister"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layRegister"
+            tools:listitem="@layout/list_register"/>
+
+        <TextView
+            android:id="@+id/kosongRegister"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layRegister"
+            android:gravity="center"
+            android:text="Daftar Kosong"
+            android:textSize="15dp"
+            android:textColor="@color/colorGrey"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/layRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/colorYellow1"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/totalRegister"
+                    android:layout_centerVertical="true"
+                    android:text="Total yang Belum Register  :  "
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/totalRegister"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:editable="false"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        jcenter()
+        maven {
+            url 'http://jitpack.io'
+            allowInsecureProtocol = true
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven {
+            url 'http://jitpack.io'
+            allowInsecureProtocol = true
+        }
+    }
+}
+
+rootProject.name = "EventFuboru"
+include ':app'
